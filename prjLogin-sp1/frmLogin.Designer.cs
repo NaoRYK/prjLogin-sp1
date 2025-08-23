@@ -30,10 +30,10 @@
         {
             lblUsuario = new Label();
             lblContraseña = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            btnAceptar = new Button();
+            btnCancelar = new Button();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
             SuspendLayout();
             // 
             // lblUsuario
@@ -54,37 +54,42 @@
             lblContraseña.TabIndex = 1;
             lblContraseña.Text = "Contraseña";
             // 
-            // button1
+            // btnAceptar
             // 
-            button1.Location = new Point(295, 32);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnAceptar.Location = new Point(295, 32);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.TabIndex = 2;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
-            // button2
+            // btnCancelar
             // 
-            button2.Location = new Point(295, 109);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(295, 109);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 3;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(112, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
+            txtUsuario.Location = new Point(112, 33);
+            txtUsuario.MaxLength = 20;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(100, 23);
+            txtUsuario.TabIndex = 4;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Location = new Point(112, 105);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
+            txtContraseña.Location = new Point(112, 105);
+            txtContraseña.MaxLength = 20;
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
+            txtContraseña.Size = new Size(100, 23);
+            txtContraseña.TabIndex = 5;
             // 
             // frmLogin
             // 
@@ -92,10 +97,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 159);
             ControlBox = false;
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnAceptar);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
             Name = "frmLogin";
@@ -108,9 +113,9 @@
 
         private Label lblUsuario;
         private Label lblContraseña;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button btnAceptar;
+        private Button btnCancelar;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
     }
 }
